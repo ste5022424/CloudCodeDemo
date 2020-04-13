@@ -1,13 +1,25 @@
 {
-    "configurations": [
-        {
-            "name": "Run on Kubernetes",
-            "type": "cloudcode.kubernetes",
-            "request": "launch",
-            "skaffoldConfig": "${workspaceFolder}/skaffold.yaml",
-            "watch": true,
-            "cleanUp": true,
-            "portForward": true
-        }
-    ]
+  "configurations": [
+    {
+      "type": "cloudcode.kubernetes",
+      "language": "Node",
+      "request": "attach",
+      "debugPort": 9229,
+      "localRoot": "${workspaceFolder}",
+      "remoteRoot": "/app",
+      "name": "Attach App on Kubernetes Cluster: NodeJS",
+      "podSelector": {
+        "app": "myapp"
+      }
+    },
+    {
+      "name": "Run on Kubernetes",
+      "type": "cloudcode.kubernetes",
+      "request": "launch",
+      "skaffoldConfig": "${workspaceFolder}/skaffold.yaml",
+      "watch": true,
+      "cleanUp": true,
+      "portForward": true
+    }
+  ]
 }

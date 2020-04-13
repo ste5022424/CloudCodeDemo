@@ -1,0 +1,8 @@
+{
+    "cloudcode.last-used-context": {
+        "Run on Kubernetes": {
+            "kubeConfigPath": "/Users/ste5022424/.kube/config",
+            "contextName": "docker-desktop"
+        }
+    }
+}

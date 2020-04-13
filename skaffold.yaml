@@ -1,0 +1,14 @@
+apiVersion: skaffold/v2alpha3
+kind: Config
+metadata:
+  name: debugging
+build:
+  artifacts:
+    - image: abc
+  tagPolicy:
+    sha256: {}
+deploy:
+  kubectl:
+    manifests:
+      - manifest/deploy.yaml
+      - manifest/svc.yaml
